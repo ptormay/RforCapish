@@ -9,8 +9,18 @@
 #'  @return a data frame containing the result of the survival calculation
 #'  @export
 KaplanMeier <- function(KMdata){
-library(survival)
-KMtest <- as.data.frame(KMdata)
+  
+  # load necessary libraries
+  library(survival)
+  
+  #input can either be csv file or data   
+  KMtest <- if(is.character(KMdata) && file.exists(KMdata)){ 
+  read.csv(KMdata) 
+    } else { 
+  as.data.frame(KMdata) 
+  } 
+  
+  
 fit <-survfit(Surv(Time,Status)~x,data=KMtest)
 
 # define custom function to create a survival data.frame
