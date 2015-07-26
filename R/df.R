@@ -19,8 +19,8 @@ df <- function(KMdata){
   } else { 
     as.data.frame(KMdata) 
   } 
-  KMtest$Time <- as.numeric(Kmtest$Time)
-  KMtest$Status <- as.numeric(Kmtest$Status)
+  KMtest$Time <- as.numeric(KMtest$Time)
+  KMtest$Status <- as.numeric(KMtest$Status)
 return (KMtest)
 
 }

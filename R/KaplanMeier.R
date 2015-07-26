@@ -20,8 +20,8 @@ KaplanMeier <- function(KMdata){
   as.data.frame(KMdata) 
   } 
 # convert to mumeric columns where necessary
-KMtest$Time <- as.numeric(Kmtest$Time)
-KMtest$Status <- as.numeric(Kmtest$Status)
+KMtest$Time <- as.numeric(KMtest$Time)
+KMtest$Status <- as.numeric(KMtest$Status)
   
 fit <-survfit(Surv(Time,Status)~x,data=KMtest)
 
