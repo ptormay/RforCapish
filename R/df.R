@@ -19,7 +19,7 @@ df <- function(KMdata){
   } else { 
     as.data.frame(KMdata) 
   } 
- KMtest <- "Hello World" 
+  
 return (KMtest)
 
 }
